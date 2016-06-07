@@ -1,14 +1,27 @@
-<h1 class="md-display-3">Putzplan</h1>
-<nav>
-	<a [routerLink]="['/']">
-    Dashboard
-  </a>
-  |
-	<a [routerLink]="['/tasks']">
-    Tasks
-  </a>
-</nav>
+<md-sidenav-layout>
+  
+  <md-sidenav #sidenav>
+    <a [routerLink]="['/']">
+       Dashboard
+    </a>
+    <a [routerLink]="['/tasks']">
+      Tasks
+    </a>
+  </md-sidenav>
 
-<main>
-	<router-outlet></router-outlet>
-</main>
+  <md-toolbar color="primary">
+    <button class="app-icon-button" (click)="sidenav.toggle()">
+      <i class="material-icons app-toolbar-menu">menu</i>
+    </button> Putzplan
+
+    <span class="app-toolbar-filler"></span>
+  </md-toolbar>
+  
+  
+
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+  
+</md-sidenav-layout>
+

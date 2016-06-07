@@ -19,7 +19,10 @@
         '@angular2-material/core':      { defaultExtension: 'js', main: 'core.js'},
         '@angular2-material/list':      { defaultExtension: 'js', main: 'list.js' },
         '@angular2-material/card':      { defaultExtension: 'js', main: 'card.js' },
-        '@angular2-material/button':    { defaultExtension: 'js', main: 'button.js' }
+        '@angular2-material/button':    { defaultExtension: 'js', main: 'button.js' },
+        '@angular2-material/sidenav':   { defaultExtension: 'js', main: 'sidenav.js' },
+        '@angular2-material/toolbar':   { defaultExtension: 'js', main: 'toolbar.js' },
+        '@angular2-material/icon':   { defaultExtension: 'js', main: 'icon.js' }
     };
     var ngPackageNames = [
         'common',

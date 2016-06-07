@@ -6,7 +6,7 @@ export var TASKS: Task[] = [
       "name":"Fenster putzen",
       "duration":60,
       "iteration":10,
-      "nextDueDate": new Date("2014-01-01T23:28:56.782Z",
+      "nextDueDate": new Date("2014-01-01T23:28:56.782Z"),
       "price":4485,
       "daysRemaining": 50
    },

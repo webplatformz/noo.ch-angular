@@ -13,13 +13,15 @@ export class Task {
         this.duration = json.duration;
         this.nextDueDate = new Date(json.nextDueDate);
         this.price = json.price;
-        this.daysRemaining = this.daysUntil(new Date(json.nextDueDate));
+        this.daysRemaining = daysUntil(new Date(json.nextDueDate));
+
+        function daysUntil(date: Date): number {
+            let dueDateInMillis = date.getTime();
+            let todayInMillis = new Date().getTime();
+            let diff = dueDateInMillis - todayInMillis;
+            return Math.ceil(diff / (1000 * 60 * 60 * 24));
+        }
     }
 
-    private daysUntil(date: Date): number {
-        let dueDateInMillis = date.getTime();
-        let todayInMillis = new Date().getTime();
-        let diff = dueDateInMillis - todayInMillis;
-        return Math.ceil(diff / (1000 * 60 * 60 * 24));
-    }
+
 }
