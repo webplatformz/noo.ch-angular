@@ -1,7 +1,7 @@
 <div class="tasklist-container">
     <md-card class="tasklist-card" *ngFor="let task of tasks">
         <h3 md-line> {{ task.name }} </h3>
-        <p md-line> due in {{ task.daysRemaining }} days</p>
+        <p md-line> due in {{ daysUntil(task) }} days</p>
         <p md-line class="demo-2"> takes {{ task.duration }} minutes </p>
     </md-card>
 </div>
