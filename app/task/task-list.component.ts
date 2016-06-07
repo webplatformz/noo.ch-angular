@@ -53,6 +53,5 @@ export class TaskListComponent implements OnInit {
     let diff = dueDateInMillis - todayInMillis;
     return Math.ceil(diff / (1000 * 60 * 60 * 24)); 
   }
-  
 }
 
