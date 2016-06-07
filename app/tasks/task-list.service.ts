@@ -18,7 +18,8 @@ export class TaskListService {
     }
 
     private extractData(res: Response): Task[] {
-        return res.json() || [];
+        var json = res.json() || [];
+        return json.map(json => new Task(json));
     }
 
 }

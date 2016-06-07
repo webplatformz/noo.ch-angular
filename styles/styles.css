@@ -16,3 +16,7 @@ h1 {
     flex-direction: column;
     flex-wrap: wrap;
 }
+
+.warning-card {
+    background-color: indianred;
+}
