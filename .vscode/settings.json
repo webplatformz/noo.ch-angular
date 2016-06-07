@@ -1,3 +1,8 @@
-// Place your settings in this file to overwrite default and user settings.
+// Place your settings in this file to overwrite the default settings
 {
+    "files.autoSave": "onFocusChange",
+    "files.exclude": {
+        "**/app/**/*.js": true,
+        "**/*.js.map": true
+    }
 }
