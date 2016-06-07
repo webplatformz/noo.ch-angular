@@ -19,7 +19,7 @@
         '@angular2-material/core':      { defaultExtension: 'js', main: 'core.js'},
         '@angular2-material/list':      { defaultExtension: 'js', main: 'list.js' },
         '@angular2-material/card':      { defaultExtension: 'js', main: 'card.js' },
-        '@angular2-material/button':      { defaultExtension: 'js', main: 'button.js' }
+        '@angular2-material/button':    { defaultExtension: 'js', main: 'button.js' }
     };
     var ngPackageNames = [
         'common',
