@@ -5,4 +5,5 @@ export class Task {
     iteration: number;
     nextDueDate: string;
     price: number;
+    daysRemaining: number;
 }

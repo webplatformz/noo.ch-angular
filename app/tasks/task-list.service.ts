@@ -17,9 +17,8 @@ export class TaskListService {
             .map(this.extractData);
     }
 
-    private extractData(res: Response) {
-        let body = res.json();
-        return body || [];
+    private extractData(res: Response): Task[] {
+        return res.json() || [];
     }
 
 }

@@ -42,7 +42,23 @@ export class TaskListComponent implements OnInit {
   }
   
   getTasks() {
-    this.taskListService.getTasks().subscribe(tasks => this.tasks = tasks);
+    this.taskListService.getTasks().subscribe(tasks => {
+      
+      tasks.forEach(task => {
+        let dueDate = new Date(task.nextDueDate);
+        task.daysRemaining = this.daysUntil(dueDate);
+      });
+      
+      this.tasks = tasks
+    });
   }
+  
+  private daysUntil(dueDate: Date): number {
+    let dueDateInMillis = dueDate.getTime();
+    let todayInMillis = new Date().getTime();
+    let diff = dueDateInMillis - todayInMillis;
+    return Math.ceil(diff / (1000 * 60 * 60 * 24)); 
+  }
+  
 }
 
