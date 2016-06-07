@@ -1,17 +1,15 @@
 <div class="balance-container">
-    <h3 md-line>Balance</h3>
-    <p> Total: {{balance?.total}} </p>
-    <p> To Pay: {{balance?.toPay}} </p>
-    <ul>
-        <li *ngFor="let user of balance?.users">
-            <div layout="row">
-                <div flex="25" flex-order="1">
-                    {{ user.name }}
-                </div>
-                <div class="nooch-align-right" flex="75" flex-order="2">
-                    <span *ngIf="user.balance > 0">+</span>{{ user.balance }} CHF
-                </div>
-            </div>
-        </li>
-    </ul>
+
+    <div class="chart-container">
+        <base-chart class="chart"
+                        [data]="doughnutChartData"
+                        [labels]="doughnutChartLabels"
+                        [chartType]="doughnutChartType"></base-chart>
+    </div>
+  <div class="legend-container">
+    <md-card *ngFor="let user of balance.users">
+        <span>{{user.name}} {{user.balance}}</span>
+    </md-card>
+  </div>
+  
 </div>
