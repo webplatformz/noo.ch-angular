@@ -3,6 +3,7 @@ import { Http, Response } from '@angular/http';
 import { Observable }     from 'rxjs/Observable';
 
 import { Balance } from './balance';
+import { BALANCE } from './mock-balance';
 
 @Injectable()
 export class BalanceService {
@@ -17,6 +18,7 @@ export class BalanceService {
     }
 
     private extractData(res: Response): Balance {
+        console.log('matching balance: ' + res.json() );
         return res.json() || {};
     }
 }
