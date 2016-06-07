@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {Routes, ROUTER_DIRECTIVES} from '@angular/router';
-import { TaskListComponent } from './tasks/task-list.component';
+import { TaskListComponent } from './task/task-list.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @Component({
   selector: 'my-app',
@@ -11,11 +12,9 @@ import { TaskListComponent } from './tasks/task-list.component';
 })
 
 @Routes([
-  { path: '/',       component: TaskListComponent,       },
+  { path: '/',       component: DashboardComponent,       },
   { path: '/tasks',  component: TaskListComponent,      },
 ])
-
-
 
 export class AppComponent { }
 
