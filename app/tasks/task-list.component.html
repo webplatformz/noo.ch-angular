@@ -1,8 +1,7 @@
-<md-card>
-    <md-list class="app-list">
-        <md-list-item *ngFor="let task of tasks">
-            <h3 md-line>{{task.name}}</h3>
-            <p md-line class="demo-secondary-text">takes {{task.duration}} minutes</p>
-        </md-list-item>
-    </md-list>
-</md-card>
+<div class="tasklist-container">
+    <md-card class="tasklist-card" *ngFor="let task of tasks">
+        <h3 md-line> {{ task.name }} </h3>
+        <p md-line> due by {{ task.nextDueDate }} </p>
+        <p md-line class="demo-2"> takes {{ task.duration }} minutes </p>
+    </md-card>
+</div>
