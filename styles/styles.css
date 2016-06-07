@@ -1,4 +1,18 @@
+body {
+    background: lightblue;
+}
+
 h1 {
     text-align: center;
     margin-top: 15px;
+}
+
+.tasklist-container {
+    margin: 0 20px;
+}
+
+.tasklist-container > task-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
