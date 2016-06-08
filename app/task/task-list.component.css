@@ -1,0 +1,29 @@
+.tasklist-container > task-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.tasklist-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.tasklist-card .task-details {
+    width: 200px;
+    flex-grow: 5;
+}
+
+.tasklist-card .task-status {
+    flex-grow: 5;
+    font-weight: 35px;
+    color: red;
+    width: 100px;
+}
+
+.tasklist-card .task-actions {
+    width: 100px;
+    flex-grow: 1;
+}
