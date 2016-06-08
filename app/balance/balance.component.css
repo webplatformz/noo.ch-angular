@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin: 50px 0;
 }
 
 .balance-container > div {
@@ -18,5 +19,17 @@
 .legend-container md-card {
     height: 30px;
     padding-top: 5px;
-    width: 70%;
+}
+
+.balance-card {
+    display: flex;
+    flex-direction: row;
+}
+
+.balance-card .user-name {
+    flex-grow: 3
+}
+
+.balance-card .user-balance {
+    flex-grow: 1
 }

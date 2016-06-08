@@ -43,8 +43,11 @@ export class BalanceComponent implements OnInit {
   }
 
   getBalance() {
-    this.balanceService.getBalance().subscribe(balance => {
+    this.balanceService.getBalance().subscribe(balance => { 
       this.balance = balance;
+      
+      this.balance.users.sort((a, b) => b.balance - a.balance);
+      
       this.updateChart(balance);
     });
   }
