@@ -10,13 +10,3 @@ h1 {
 main {
     margin: 0 50px;
 }
-
-.tasklist-container > task-list {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-.warning-card {
-    background-color: indianred;
-}

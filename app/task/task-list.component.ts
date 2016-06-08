@@ -22,13 +22,16 @@ import { TaskListService } from './task-list.service';
   moduleId: module.id,
   selector: 'task-list',
   templateUrl: 'task-list.component.html',
+  styleUrls: ['task-list.component.css'],
   providers: [
-    TaskListService
+    TaskListService,
+    MdIconRegistry
   ],
   directives: [
     MD_LIST_DIRECTIVES,
     MD_CARD_DIRECTIVES,
-    MD_BUTTON_DIRECTIVES
+    MD_BUTTON_DIRECTIVES,
+    MD_ICON_DIRECTIVES
   ],
 })
 

@@ -1,8 +1,18 @@
 <div class="tasklist-container">
-    <md-card class="tasklist-card" [ngClass]="{ 'warning-card' : task.daysRemaining <= 0 }" *ngFor="let task of tasks">
-        <h3 md-line> {{ task.name }} </h3>
-        <p md-line *ngIf="task.daysRemaining > 0"> due in {{ task.daysRemaining }} days</p>
-        <p md-line *ngIf="task.daysRemaining <= 0">{{ abs(task.daysRemaining) }} days overdue</p>
-        <p md-line class="demo-2"> takes {{ task.duration }} minutes </p>
+    <md-card [ngClass]="{ 'warning-card' : task.daysRemaining <= 0 }" *ngFor="let task of tasks">
+        <div class="tasklist-card">
+            <div class="task-details">
+                <h3 md-line> {{ task.name }}</h3>
+                <p md-line *ngIf="task.daysRemaining > 0"> due in {{ task.daysRemaining }} days</p>
+                <p md-line *ngIf="task.daysRemaining <= 0">{{ abs(task.daysRemaining) }} days overdue</p>
+                <p md-line class="demo-2"> takes {{ task.duration }} minutes </p>
+            </div>
+            <div class="task-status">
+                <md-icon *ngIf="task.daysRemaining <= 0">watch_later</md-icon>
+            </div>
+            <div class="task-actions">
+                <button md-raised-button>DONE</button>
+            </div>
+        </div>
     </md-card>
 </div>
