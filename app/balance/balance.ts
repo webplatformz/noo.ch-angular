@@ -1,4 +1,4 @@
-import { User } from '../user/User';
+import { User } from './../user/User';
 
 export class Balance {
     users: User[];

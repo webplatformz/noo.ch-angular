@@ -10,7 +10,7 @@ export class TaskListService {
 
     constructor(private http: Http) { }
 
-    private tasksUrl = 'http://localhost:3042/api/plans/mockPlanId/tasks';
+    private tasksUrl = 'http://noo.ch:8080/api/plans/mockPlanId/tasks';
 
     getTasks(): Observable<Task[]> {
         return this.http.get(this.tasksUrl)
